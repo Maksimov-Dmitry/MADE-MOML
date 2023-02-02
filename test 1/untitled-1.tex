@@ -1,0 +1,44 @@
+\documentclass{homework}
+
+\title{Test 1}
+\author{
+  Dmitrii, Maksimov\\
+  \texttt{maksimov.dmitrii.m@gmail.com}
+}
+\begin{document}
+
+\maketitle
+
+\exercise
+\begin{itemize}
+	\item $c_{ij}x_{ij}$ - transportation cost of x from i to j
+	\item $c_{ij}^2y_{ij}$ - transportation cost of y from i to j
+\end{itemize}
+Hence, the optimization problem:
+\begin{align*}
+	\min_{x,y} \quad
+	&\sum_{i=1}^n\sum_{j=1}^mc_{ij}x_{ij} + \sum_{i=1}^n\sum_{j=1}^mc_{ij}^2y_{ij} \\
+	\text{s.t.} \quad
+	&\sum_{j=1}^mx_{ij}\leq a_{i,1}, \sum_{j=1}^my_{ij}\leq a_{i,2}, \forall i = 1,\dots ,n\\
+	&\sum_{i=1}^nx_{ij}\geq b_{j,1}, \sum_{i=1}^ny_{ij}\geq b_{j,2}, \forall j = 1,\dots ,m\\
+\end{align*}
+Answer: b
+\exercise*
+$f_i(w) = (z_{3,0}-0) + \ldots + (z_{3,j-1}-0) +(z_{3,j}-1) +(z_{3,j+1}-0) + \ldots +(z_{3,9}-0)$ is not a loss function. This is because we can choose the wrong answer, which will give 0.
+
+Answer: b
+\exercise*
+Let $M = 1, D = 10, n=1000, 1 - \delta = 0.999 \rightarrow \delta = 0.001$
+\begin{align*}
+\sqrt{\frac{M^2D^2n\ln(m)\ln(\frac{n}{\delta})}{m}}\leq10^{-3} \Longrightarrow m \geq 10^{14}
+\end{align*}
+Answer: d
+\exercise*
+Let $\hat{x} =\underset{x\in\R^n}{\mathrm{argmin}} \sum_{i=1}^m|y_i - \langle a^i, x\rangle|^{\frac{3}{2}}$, then $\hat{y}_i \sim N(\langle a^i, x\rangle|^{\frac{3}{2}}, \sigma^2)$. Hence, $p(\xi_i) \sim \exp(-\alpha|\xi_i|^{\frac{3}{2}})$.
+
+Answer: c
+\exercise*
+Let $f(x) \in \R^n$ - M-Lipschitz w.r.t. $l_2$ norm, then $|f(x) - f(y)| \leq M||x-y||_2, \forall x,y \in \R^n$
+
+Answer: c
+\end{document}
