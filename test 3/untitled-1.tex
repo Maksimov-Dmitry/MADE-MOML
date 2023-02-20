@@ -1,0 +1,45 @@
+\documentclass{homework}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\title{Test 3}
+\author{
+  Dmitrii, Maksimov\\
+  \texttt{maksimov.dmitrii.m@gmail.com}
+}
+\begin{document}
+
+\maketitle
+
+\exercise
+The Jacobian matrix of $f(x)$ is $\frac{df(g(h(x))}{dx^T}$. $\frac{df^T(g(h(x))}{dx}$ is the transposed Jacobian matrix.\newline
+Answer: d
+\exercise*
+The matrix $A$ is not necessarily symmetric. \newline
+Answer: c
+\exercise*
+Answer: d
+\exercise*
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = left,
+    xlabel = \(x\),
+    ylabel = {\(f(x)\)},
+]
+\addplot [
+    domain=-10:0, 
+    samples=10, 
+]
+{-2*x + 1};
+\addplot [
+    domain=0:2, 
+    samples=10, 
+    ]
+    {e^(2*x)};
+\end{axis}
+\end{tikzpicture}
+Answer: d
+\exercise*
+Answer: a
+\end{document}
