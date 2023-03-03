@@ -1,0 +1,32 @@
+\documentclass{homework}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\title{Test 4}
+\author{
+  Dmitrii, Maksimov\\
+  \texttt{maksimov.dmitrii.m@gmail.com}
+}
+\begin{document}
+
+\maketitle
+
+\exercise
+Newton's method: $x_{k+1}=x_k - [\nabla^2 f(x_k)]^{-1}\nabla f(x_k)$
+\begin{itemize}
+	\item $\nabla f(x_k) = 12x_k^3 + 4x_k$
+	\item $\nabla^2 f(x_k) = 36x_k^2 + 4$
+\end{itemize}
+Answer: d
+\exercise*
+Exact Line Search: $\underset{\alpha_k}{\mathrm{argmin}}\;f(x_k - \alpha\nabla f(x_k))$ \newline Answer: c
+\exercise*
+Gradient divergence: $f(x_{k+1}) > f(x_k)$.
+
+$f(4 - \gamma\nabla f(4)) > f(4) \Rightarrow 4(4-12\gamma)^2 - 20(4 - 12\gamma) + 7 +9 > 0  \Rightarrow (4 - 12 \gamma - 1)(4 - 12 \gamma - 4) > 0.$ Taking into account $\gamma > 0 \Rightarrow \gamma > 0.25.$ \newline Answer: b
+\exercise*
+Since MSE is a convex function, $N \approx \frac{2LR}{\varepsilon}$ and time $\approx Nmn \Rightarrow$, where $L = \frac{\lambda_{\max}(A^TA)}{m}, R=\max ||x-x^\star|| \Rightarrow Nmn = \frac{2R\lambda_{\max}(A^TA)}{\varepsilon}n$. Let's say $R_1 = R_2$, then $\text{time}_1 < \text{time}_2.$ \newline Answer: a
+\exercise*
+Since, $\underset{x}{\mathrm{argmin}}\;\frac{x^2}{4} = 0$ and $x_{k+1}=x_k-\frac{x_k}{2}=\frac{x_k}{2}, ||x_k - x^\star||\rightarrow 0$ \newline Answer: c
+\end{document}
