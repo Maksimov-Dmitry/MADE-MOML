@@ -1,3 +1,5 @@
 *synctex.gz
 .DS_Store
 *.log
+__pycache__/
+homework_2/.vscode/*
