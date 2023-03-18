@@ -1,0 +1,48 @@
+\documentclass{homework}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\title{Test 6}
+\author{
+  Dmitrii, Maksimov\\
+  \texttt{maksimov.dmitrii.m@gmail.com}
+}
+\begin{document}
+
+\maketitle
+
+\exercise
+Answer: b
+\exercise*
+$x_{k+1} = \underset{x\in\R^n}{\mathrm{argmin}}\; [\langle \nabla f(x_k), x-x_k\rangle + \frac{1}{\gamma_kV(x,x_k)}], \text{ where }V(x,x_k) = d(x) - d(x_k) - \langle\nabla d(x_k), x-x_k \rangle$
+
+Answer: c
+\exercise*
+\begin{enumerate}[label=(\alph*)]
+ \item$d(x) = -\log x,\; V(x, y) = \frac{x}{y} -\log\frac{x}{y} - 1 = \frac{x}{y} +\log\frac{y}{x} - 1$
+ \item $\frac{1}{x^2}$ - don't know
+ \item$d(x) = x\log x-x,\; V(x, y) = x\log\frac{x}{y} - x + y$
+ \item ok
+\end{enumerate}
+Since only one statement is wrong:\newline
+Answer: c
+\exercise*
+$s1, s2, s3$ should be linear independent
+\begin{enumerate}[label=(\alph*)]
+	\item $2s_1=s_3$
+	\item ok
+	\item $s_1=-s_2-s_3$
+\end{enumerate}
+ Answer: b
+\exercise*
+$\mathrm{prox}_f(x)=\underset{u}{\mathrm{argmin}}f(u) + \frac{1}{2}||u-x||^2_2$
+\begin{enumerate}[label=(\alph*)]
+	\item True from lecture
+	\item $2\lambda u + (u-x) = 0 \Rightarrow u=\frac{x}{2\lambda+1}$
+	\item $\frac{\lambda}{u}+ (u-x) = 0 \Rightarrow u^2 - ux + \lambda = 0 \Rightarrow  u = \frac{x\pm\sqrt{x^2 -4 \lambda}}{2}, u = \frac{x-\sqrt{x^2 -4 \lambda}}{2} - \mathrm{argmin}$
+	\item ok
+
+Answer: c
+\end{enumerate}
+\end{document}
