@@ -3,3 +3,5 @@
 *.log
 __pycache__/
 homework_2/.vscode/*
+homework_3/dump/*
+homework_3/datasets/*
